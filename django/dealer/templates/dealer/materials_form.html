@@ -1,0 +1,28 @@
+{% extends "dealer/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+    Materials
+{% endblock %}
+{% block content %}
+<br>
+<div class="row justify-content-start">
+    <div class="col-7">
+        <form action="{% url 'add-materials' %}" method="POST" class="row g-3">
+            {% csrf_token %}
+            <legend class="border-bottom mb-4">Add Material</legend>
+                {{ form|crispy }}
+            <div class="col-3">
+                <a href="{% url 'dealer-dashboard' %}" class="btn btn-outline-secondary">Back to dashboard</a>
+            </div>
+            <div class="col-5 offset-1">
+                <button class="btn btn-success" type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row justify-content-between form-group">
+    
+</div>
+
+
+{% endblock %}

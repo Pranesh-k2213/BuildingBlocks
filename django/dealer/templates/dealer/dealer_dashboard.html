@@ -1,0 +1,23 @@
+{% extends "dealer/base.html" %}
+{% block title %}
+    dashboard
+{% endblock %}
+{% block content %}
+
+<div class="row py-3">
+    <div class="col-12 pb-2">
+        <h1 class="display1">Dealer Deshboard</h1>
+    </div>
+    <div class="col">
+        <a href="{% url 'logout' %}" class="btn btn-outline-primary">Logout</a>
+    </div>
+</div>
+<div class="row justify-content-start py-3">
+    <div class="col-2">
+        <a href="{% url 'add-materials' %}" class="btn btn-outline-primary">Add Materials</a>
+    </div>
+    <div class="col-2">
+        <a href="{% url 'material-list' %}" class="btn btn-outline-primary">Material List</a>
+    </div>
+</div>
+{% endblock %}

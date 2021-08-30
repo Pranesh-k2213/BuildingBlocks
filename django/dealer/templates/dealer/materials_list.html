@@ -1,0 +1,26 @@
+{% extends "dealer/base.html" %}
+{% block title %}
+    Materials
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-8">
+        <ul class="list-group">
+            {% for material in material_list %}
+                <li class="list-group-item">
+                    {{ material.item}}   {{material.unit}}
+                        <a href="#" class="btn btn-danger btn-sm">delete</a>
+                </li>
+            {% empty %}
+                <li class="list-group-item text-light">No items yet</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col">
+        <a href="{% url 'dealer-dashboard' %}" class="btn btn-outline-secondary">Back</a>
+    </div>
+</div>
+
+{% endblock %}

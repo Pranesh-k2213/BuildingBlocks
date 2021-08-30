@@ -1,0 +1,16 @@
+{% extends "home/base.html" %}
+{% block title %}
+    About page
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <h1 class="display1">This is the home about page</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
+        </div>
+    </div>
+{% endblock %}

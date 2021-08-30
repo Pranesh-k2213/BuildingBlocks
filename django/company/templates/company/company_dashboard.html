@@ -1,0 +1,16 @@
+{% extends "company/base.html" %}
+{% block title %}
+    dashboard
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h1 class="display1">Company Deahboard</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <a href="{% url 'logout' %}" class="btn btn-outline-primary">Logout</a>
+    </div>
+</div>
+{% endblock %}
