@@ -1,0 +1,40 @@
+{% extends "company/base.html" %}
+{% block title %}
+    Projects
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-4">
+            <h2 class="display-2">Projects List</h2>
+        </div>
+        <div class="col-1 offset-3 align-self-end">
+            <a href="{% url 'project-create' %}" class="btn btn-success">+ add</a>
+        </div>
+    </div>
+    <div class="row py-4">
+        <div class="col-8">
+            <div class="row g-3">
+                {% for project in project_list %}
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title pb-2">{{ project.name }}</h4>
+                            <p class="card-text lead">
+                                <strong>Site Engineer:</strong> {{ project.site_er.user.username }}
+                                <br><strong>Address:</strong><br>
+                                {{project.address}}
+                            </p>
+                            <a href="{% url 'project-update' project.pk %}" class="btn btn-primary py-2">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col">
+                    <h3 class="display-5">No Projects Yet</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'company-dashboard' %}" class="btn btn-outline-secondary">Back to Dashboard</a>
+{% endblock %}

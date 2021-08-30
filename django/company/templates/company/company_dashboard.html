@@ -5,12 +5,22 @@
 {% block content %}
 <div class="row">
     <div class="col">
-        <h1 class="display1">Company Deahboard</h1>
+        <h1 class="display1">Company Dashboard</h1>
     </div>
 </div>
-<div class="row">
+<div class="row py-3">
     <div class="col">
-        <a href="{% url 'logout' %}" class="btn btn-outline-primary">Logout</a>
+        <a href="{% url 'logout' %}" class="btn btn-outline-secondary">Logout</a>
+    </div>
+</div>
+<div class="row py-3">
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title pb-3">Projects</h3>
+                <a href="{% url 'project-list' %}" class="btn btn-primary">View Projects</a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

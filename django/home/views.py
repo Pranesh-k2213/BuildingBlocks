@@ -15,13 +15,12 @@ def loginView(request):
             )
             if user is not None:
                 login(request, user)
-                messages.success(request, 'You are now logged in')
                 if hasattr(user, 'company'):
                     return HttpResponseRedirect('/company/')
                 elif hasattr(user, 'dealer'):
                     return HttpResponseRedirect('/dealer/')
                 elif hasattr(user, 'siteer'):
-                    return HttpResponse('<h1> siteEr </h1>')
+                    return HttpResponseRedirect('/siteEr/')
                 else:
                     return HttpResponseRedirect('/success/')
                 

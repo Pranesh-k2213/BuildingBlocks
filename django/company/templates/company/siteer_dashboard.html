@@ -1,0 +1,40 @@
+{% extends "company/base.html" %}
+{% block title %}
+    Dashboard
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h1 class="display1">Site Engineer Deahboard</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <a href="{% url 'logout' %}" class="btn btn-outline-secondary">Logout</a>
+    </div>
+</div>
+<div class="row py-4">
+    <div class="col-8">
+        <div class="row g-3">
+            {% for project in projects %}
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title pb-2">{{ project.name }}</h4>
+                        <p class="card-text lead">
+                            <strong>Address:</strong><br>
+                            {{project.address}}
+                        </p>
+                        <a href="#" class="btn btn-primary py-2">Place request</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col">
+                <h3 class="display-5">No Projects Yet</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

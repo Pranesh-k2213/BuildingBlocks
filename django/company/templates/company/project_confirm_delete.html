@@ -1,0 +1,29 @@
+{% extends "company/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+    Projects
+{% endblock %}
+{% block content %}
+    <h2 class="display-3">Confirm Delete</h2>
+    <div class="row py-4">
+        <div class="col-8">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-3"> Project </legend>
+                    <p>Are you sure you want to delete "{{ project }}"?</p>
+                </fieldset>
+                <div class="row justify-content-between pt-4">
+                    <div class="col-3">
+                        <a href="{% url 'project-update' project.pk %}" class="btn btn-outline-success">Back to projects edit</a>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group">
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock%}

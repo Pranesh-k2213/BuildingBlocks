@@ -1,0 +1,29 @@
+{% extends "company/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+    Projects
+{% endblock %}
+{% block content %}
+    <h2 class="display-3">Create Project</h2>
+    <div class="row py-4">
+        <div class="col-8">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-3"> Project </legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="row justify-content-between pt-4">
+                    <div class="col-3">
+                        <a href="{% url 'project-list' %}" class="btn btn-outline-secondary">Back to projects list</a>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group">
+                            <button class="btn btn-outline-info" type="submit">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock%}

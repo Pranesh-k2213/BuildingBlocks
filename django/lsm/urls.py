@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from company import views as com_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('dealer/', include('dealer.urls')),
     path('company/', include('company.urls')),
+    path('siteEr/', com_views.SiteErDashboardView.as_view(), name='siteer-dashboard'),
 ]

@@ -11,10 +11,7 @@ class MaterialCreateView(UserPassesTestMixin, SuccessMessageMixin, FormView):
     template_name = 'dealer/materials_form.html'
     form_class = AddMaterialsForm
     success_url = '/dealer/addMaterials'
-    success_message = "%(item)s was created successfully"
-    
-    def get_initial(self):
-        return { 'dealer':self.request.user }
+    success_message = "%(item)s was created successfully"   
     
     def form_valid(self, form):
         form.instance.dealer = self.request.user.dealer
