@@ -38,6 +38,7 @@ The website also has set of login id and password listed below.
 |td|td123456| To login as a dealer |
 |tc|tc123456| To login as a company |
 |ts|ts123456| To login as a site engineer |
+|admin|admin123456| To access admin page |
 
 
 
