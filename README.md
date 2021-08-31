@@ -15,7 +15,6 @@ If this prints a version number like 3.2.5 django is successfully installed
 finally to run this project
 
 Move to django folder in the files downloaded.
-
 The cmd should look something like this "C:\Users\kkpra\Desktop\BuildingBlocks\django>"
 
 Then type
