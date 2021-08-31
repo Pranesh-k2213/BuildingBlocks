@@ -13,6 +13,10 @@ py -m django --verion
 ```
 If this prints a version number like 3.2.5, then django is successfully installed.
 
+## Getting code to desktop
+You can download the code as a zip file or use Github desktop app .
+Using Github desktop app is better because whenever the code in the web is updated you can get the new code by just clicking a button. Instead of downloading the zip file again and extracting it.
+
 
 ## Running the project
 Run this project
