@@ -13,6 +13,7 @@ py -m django --verion
 ```
 If this prints a version number like 3.2.5, then django is successfully installed.
 
+
 ## Running the project
 Run this project
 
@@ -26,6 +27,7 @@ py manage.py runserver
 ```
 This command starts a django server on http://127.0.0.1:8000/,
 Which you access by typing " http://127.0.0.1:8000/" in your browser url bar.
+
 
 ## User Ids
 
