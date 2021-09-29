@@ -7,4 +7,5 @@ urlpatterns = [
     path('login/', views.loginView, name='login'),
     path('success/', TemplateView.as_view(template_name='home/success.html'), name='success'),
     path('logout/', views.logoutView, name='logout'),
+    path('under_construction/', TemplateView.as_view(template_name='home/feature_under_construction.html'), name='under-construction')
 ]

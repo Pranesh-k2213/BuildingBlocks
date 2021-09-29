@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .form import UserLoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.views.generic import TemplateView
 
 
 def loginView(request):

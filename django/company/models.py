@@ -24,16 +24,21 @@ class Project(models.Model):
     site_er = models.ForeignKey(SiteEr, on_delete=models.SET_NULL, null = True)
     address = models.TextField(max_length=250)
     is_completed = models.BooleanField(default=False)
+    pending_request = models.IntegerField(default=0)
 
 
     def __str__(self):
         return f'{self.name} project'
+        
 
 BILL_STATE = (
     ('E', 'Editing'),
     ('P', 'Request Placed'),
     ('O', 'Order placed'),
+    ('A', 'Order Accepted'),
     ('D', 'Delivered'),
+    ('V', 'Delivery Verified'),
+    ('R', 'Rejected'),
 )
     
 

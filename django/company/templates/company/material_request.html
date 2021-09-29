@@ -20,7 +20,7 @@
                     {% for bill_item in bill_items %}
                     <tr>
                         <th scope="row">{{ bill_item.item_name }}</th>
-                        <td>{{ bill_item.quantity }}{{enable}}</td>
+                        <td>{{ bill_item.quantity }}</td>
                         <td>{{  bill_item.unit  }}</td>
                         <td><a href="{% url 'material-delete' bill_item.pk %}" class="p1 btn btn-danger btn-sm">delete</a></td>
                     </tr>
