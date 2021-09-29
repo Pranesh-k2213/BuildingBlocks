@@ -22,5 +22,4 @@ urlpatterns = [
     path('', include('home.urls')),
     path('dealer/', include('dealer.urls')),
     path('company/', include('company.urls')),
-    path('siteEr/', com_views.SiteErDashboardView.as_view(), name='siteer-dashboard'),
 ]

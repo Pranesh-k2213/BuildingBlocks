@@ -25,7 +25,8 @@
                             <strong>Address:</strong><br>
                             {{project.address}}
                         </p>
-                        <a href="#" class="btn btn-primary py-2">Place request</a>
+                        <a href="{% url 'material-request' project.pk %}" class="btn btn-primary my-2">Place request</a>
+                        <a href="{% url 'past-material-request' project.pk %}" class="btn btn-secondary my-2">Past orders</a>
                     </div>
                 </div>
             </div>

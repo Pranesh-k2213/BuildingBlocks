@@ -16,8 +16,7 @@ class SiteEr(models.Model):
 
     def __str__(self):
         return self.user.username
-
-
+    
 
 class Project(models.Model):
     name = models.CharField(max_length=50)
@@ -29,3 +28,22 @@ class Project(models.Model):
 
     def __str__(self):
         return f'{self.name} project'
+
+BILL_STATE = (
+    ('E', 'Editing'),
+    ('P', 'Request Placed'),
+    ('O', 'Order placed'),
+    ('D', 'Delivered'),
+)
+    
+
+class BillItem(models.Model):
+    site_er = models.ForeignKey(SiteEr, on_delete=models.PROTECT, default=1)
+    project = models.ForeignKey(Project, on_delete=models.PROTECT, default=1)
+    item_name = models.CharField(max_length=50)
+    unit = models.CharField(max_length=10)
+    quantity = models.FloatField()
+    state = models.CharField(max_length=1, choices=BILL_STATE, default='E')
+
+    def __str__(self):
+        return f'{self.item_name}'

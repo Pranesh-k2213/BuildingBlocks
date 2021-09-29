@@ -20,7 +20,7 @@ def loginView(request):
                 elif hasattr(user, 'dealer'):
                     return HttpResponseRedirect('/dealer/')
                 elif hasattr(user, 'siteer'):
-                    return HttpResponseRedirect('/siteEr/')
+                    return HttpResponseRedirect('/company/siteEr/')
                 else:
                     return HttpResponseRedirect('/success/')
                 
